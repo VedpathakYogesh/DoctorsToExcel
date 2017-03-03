@@ -74,20 +74,26 @@ namespace DptsData.Controllers
             {
                 return View(model);
             }
-            string newFileName = "G:\\question1.csv";
+
+            DateTime today = DateTime.Today;
+            // DateTime now = DateTime.Now;
+
+            string newFileName = "G:\\DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv";
+
+            // string newFileName = "G:\\question1.csv";
             string row = model.FirstName + ","+ model.LastName + ","  + model.EmailId + "," + model.PhoneNumber + "," + model.Gender + "," 
-                + model.ShortProfile + "," + model.RegistrationNumber + "," + model.DateOfBirth + Environment.NewLine;
+                + model.ShortProfile + "," + model.RegistrationNumber + "," + model.DateOfBirth + model.Specality + model.YearsOfExperience  +  Environment.NewLine;
 
             // string row = model.Email + Environment.NewLine;
 
             if (!System.IO.File.Exists(newFileName))
             {
-                row = "FirstName,LastName,Email,PhoneNumber,Gender,ShortProfile,RegistrationNumber,DateOfBirth" + Environment.NewLine;
+                row = "FirstName,LastName,Email,PhoneNumber,Gender,ShortProfile,RegistrationNumber,DateOfBirth,Specality,YearsOfExperience" + Environment.NewLine;
                 //   row = "FirstName" + Environment.NewLine;
                 System.IO.File.WriteAllText(newFileName, row);
             }
             System.IO.File.AppendAllText(newFileName, row);
-            Response.Write("<script>alert(' Data Inserted Sucessfully.')</script>");
+            Response.Write("<script>alert(' Registration Successful.')</script>");
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.FirstName, model.LastName, model.RememberMe, shouldLockout: false);

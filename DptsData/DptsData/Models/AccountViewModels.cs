@@ -56,5 +56,20 @@ namespace DptsData.Models
         [DataType(DataType.Date)]
         public string DateOfBirth { get; set; }
 
+        [Required]
+        [Display(Name = "Specality")]
+        [DataType(DataType.Text)]
+        public string Specality { get; set; }
+
+        [Required]
+        [Display(Name = "YearsOfExperience")]
+        [DataType(DataType.Text)]
+        public string YearsOfExperience { get; set; }
+
+        //[Required]
+        //[Display(Name = "YearsOfExperience")]
+        //[DataType(DataType.Text)]
+        //public int YearsOfExperience { get; set; }
+
     }
 }
