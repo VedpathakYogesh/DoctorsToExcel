@@ -74,40 +74,57 @@ namespace DptsData.Controllers
             {
                 return View(model);
             }
-            string newFileName = "G:\\question1.csv";
+
+            DateTime today = DateTime.Today;
+            // DateTime now = DateTime.Now;
+
+           // string targetpath = Server.MapPath("~/Doc/");
+          //  string newFileName = "/excelsheet/DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv";
+            string newFileName = "G:\\DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv";
+
+            // string newFileName = "G:\\question1.csv";
             string row = model.FirstName + ","+ model.LastName + ","  + model.EmailId + "," + model.PhoneNumber + "," + model.Gender + "," 
-                + model.ShortProfile + "," + model.RegistrationNumber + "," + model.DateOfBirth + Environment.NewLine;
+                + model.ShortProfile + "," + model.RegistrationNumber + "," + model.DateOfBirth + model.Specality + model.YearsOfExperience  +  Environment.NewLine;
 
             // string row = model.Email + Environment.NewLine;
 
             if (!System.IO.File.Exists(newFileName))
             {
-                row = "FirstName,LastName,Email,PhoneNumber,Gender,ShortProfile,RegistrationNumber,DateOfBirth" + Environment.NewLine;
+                row = "FirstName,LastName,Email,PhoneNumber,Gender,ShortProfile,RegistrationNumber,DateOfBirth,Specality,YearsOfExperience" + Environment.NewLine;
                 //   row = "FirstName" + Environment.NewLine;
                 System.IO.File.WriteAllText(newFileName, row);
             }
             System.IO.File.AppendAllText(newFileName, row);
-            Response.Write("<script>alert(' Data Inserted Sucessfully.')</script>");
+            Response.Write("<script>alert(' Registration Successful.')</script>");
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.FirstName, model.LastName, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index", "Account");
+                // return RedirectToLocal(Index);
                 case SignInStatus.LockedOut:
-                    return View("Lockout");
+                    return View("Index");
+                //return View("Lockout");
                 case SignInStatus.RequiresVerification:
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                   // ModelState.AddModelError("", "valid login attempt.");
                     return View(model);
             }
         }
+        // yogesh code start here 10:53 AM
+        //public class UploadFileController : Controller
+        //{
 
-        
-                #region Helpers
+            public ActionResult Success()
+            {
+                return View();
+            }
+        //}
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 

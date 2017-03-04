@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DptsData", "DptsData\DptsData.csproj", "{CFE8290E-3BA8-4BC1-9644-7E5DDA44965C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "excelsheet", "excelsheet", "{49B15415-BC4A-4C47-88C7-0C5B2C17EF71}"
-	ProjectSection(SolutionItems) = preProject
-		..\question1.csv = ..\question1.csv
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

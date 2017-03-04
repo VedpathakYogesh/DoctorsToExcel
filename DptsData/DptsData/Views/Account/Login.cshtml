@@ -50,33 +50,11 @@
                     </div>
                     <br />
 
-                    @*<div class="form-group">
-                            @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(m => m.Gender, new { @class = "form-control" })
-
-                                @Html.ValidationMessageFor(m => m.Gender, "", new { @class = "text-danger" })
-                            </div>
-                        </div>*@
-
                     <div>
                         <div class="form-group">
                             @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
                             @Html.RadioButtonFor(model => model.Gender, "Male", false)@Html.Label("Male")
                             @Html.RadioButtonFor(model => model.Gender, "Female", false)@Html.Label("Female")
-
-                            @*@Html.RadioButtonFor(m => m.Gender, "Male" )
-                                @Html.RadioButtonFor(m => m.Gender, "Female")*@
-                            @*<div class="col-md-10">
-                                    <input checked="checked"
-                                           id="Gender"
-                                           name="Gender"
-                                           type="radio"
-                                           value="Male" />
-                                <input id="Gender"
-                                name="Gender"
-                                type="radio"
-                                value="Female" />*@
                         </div>
                     </div>
                     <hr />
@@ -107,23 +85,39 @@
                             @Html.ValidationMessageFor(m => m.DateOfBirth, "", new { @class = "text-danger" })
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Specality, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Specality, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Specality, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.YearsOfExperience, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.YearsOfExperience, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.YearsOfExperience, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
                     @*<div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <div class="checkbox">
-                                    @Html.CheckBoxFor(m => m.RememberMe)
-                                    @Html.LabelFor(m => m.RememberMe)
-                                </div>
-                            </div>
-                        </div>*@
+                        @Html.LabelFor(m => m.YearsOfExperience, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.YearsOfExperience, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.YearsOfExperience, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Register" class="btn btn-default" />
+                           
+                           
+                            <input type="submit" value="Register" class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866" /> &nbsp;&nbsp;&nbsp;&nbsp;
+                             <button type="button" onclick="location.href='@Url.Action("Index", "UploadFile")'">ViewData</button> 
                         </div>
-
-                    </div>
-              
-
-                
+                            </div>
                 @* Enable this once you have account confirmation enabled for password reset functionality
                     <p>
                         @Html.ActionLink("Forgot your password?", "ForgotPassword")
