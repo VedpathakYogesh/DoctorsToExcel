@@ -38,6 +38,7 @@ namespace DptsData.Controllers
                 ViewBag.Error = "Photosize Should be 1MB Max .";
                 return View("Index");
             }
+            // Length Checking
             else
             {
                 if (Photo.ContentLength > 0)
