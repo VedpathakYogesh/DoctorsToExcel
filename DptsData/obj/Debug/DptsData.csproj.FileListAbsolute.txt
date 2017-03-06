@@ -244,3 +244,15 @@ G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\Microsoft.Owin.Security.Microsoft
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\obj\Debug\DptsData.csprojResolveAssemblyReference.cache
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\obj\Debug\DptsData.dll
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\obj\Debug\DptsData.pdb
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\Excel.dll
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\ICSharpCode.SharpZipLib.dll
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\Excel.pdb
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\System.Net.Http.Formatting.dll
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\System.Web.Http.dll
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\System.Web.Http.WebHost.dll
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\System.Net.Http.Formatting.xml
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\System.Web.Http.xml
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\System.Web.Http.WebHost.xml
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\LumenWorks.Framework.IO.dll
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\LumenWorks.Framework.IO.pdb
+G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\LumenWorks.Framework.IO.xml

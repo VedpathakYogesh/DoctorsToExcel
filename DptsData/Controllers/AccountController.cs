@@ -78,7 +78,28 @@ namespace DptsData.Controllers
             DateTime today = DateTime.Today;
             // DateTime now = DateTime.Now;
 
-            string newFileName = "G:\\DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv";
+            // string targetpath = Server.MapPath("~/Doc/");
+
+            // var path = Path.Combine(Server.MapPath("~/Contents/Images"), fileName); ("~/Contents/Excel"),+DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv";
+
+            //string newFileName;
+            //var path = Server.MapPath(@"~/Contents/DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv");
+
+            //using (System.IO.StreamWriter file = new System.IO.StreamWriter(path, true))
+            //{
+            //    //file.WriteLine(model.newFileName.ToString());
+            //}
+
+
+            string newFileName = Server.MapPath(@"~/Contents/DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv");
+
+            //string newFileName = "G:\\DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv";
+            // string newFileName = Server.MapPath("~excelsheet");
+            //  const string path = "/Doc/Users.xlsx";
+
+            //  string targetpath = Server.MapPath("~/Doc/");
+
+            //  var path = Path.Combine(Server.MapPath("~/Contents/Images"), fileName);
 
             // string newFileName = "G:\\question1.csv";
             string row = model.FirstName + ","+ model.LastName + ","  + model.EmailId + "," + model.PhoneNumber + "," + model.Gender + "," 
@@ -100,20 +121,29 @@ namespace DptsData.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index", "Account");
+                // return RedirectToLocal(Index);
                 case SignInStatus.LockedOut:
-                    return View("Lockout");
+                    return View("Index");
+                //return View("Lockout");
                 case SignInStatus.RequiresVerification:
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                   // ModelState.AddModelError("", "valid login attempt.");
                     return View(model);
             }
         }
+        // yogesh code start here 10:53 AM
+        //public class UploadFileController : Controller
+        //{
 
-        
-                #region Helpers
+            public ActionResult Success()
+            {
+                return View();
+            }
+        //}
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
