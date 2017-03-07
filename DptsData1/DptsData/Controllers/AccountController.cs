@@ -76,7 +76,15 @@ namespace DptsData.Controllers
             }
 
             DateTime today = DateTime.Today;
+<<<<<<< HEAD
             string newFileName = Server.MapPath(@"~/Contents/DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv");
+=======
+            // DateTime now = DateTime.Now;
+
+            string newFileName = "G:\\DateTime" + DateTime.Today.ToString("yyyyMMdd_hhmmss") + ".csv";
+
+            // string newFileName = "G:\\question1.csv";
+>>>>>>> 8292167de7131b010ff3fc497ee47e64e548224d
             string row = model.FirstName + ","+ model.LastName + ","  + model.EmailId + "," + model.PhoneNumber + "," + model.Gender + "," 
                 + model.ShortProfile + "," + model.RegistrationNumber + "," + model.DateOfBirth + model.Specality + model.YearsOfExperience  +  Environment.NewLine;
 
@@ -96,15 +104,22 @@ namespace DptsData.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+<<<<<<< HEAD
                     return RedirectToAction("Index", "Account");
                 // return RedirectToLocal(Index);
                 case SignInStatus.LockedOut:
                     return View("Index");
                 //return View("Lockout");
+=======
+                    return RedirectToLocal(returnUrl);
+                case SignInStatus.LockedOut:
+                    return View("Lockout");
+>>>>>>> 8292167de7131b010ff3fc497ee47e64e548224d
                 case SignInStatus.RequiresVerification:
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
+<<<<<<< HEAD
                    // ModelState.AddModelError("", "valid login attempt.");
                     return View(model);
             }
@@ -119,6 +134,15 @@ namespace DptsData.Controllers
             }
         //}
         #region Helpers
+=======
+                    ModelState.AddModelError("", "Invalid login attempt.");
+                    return View(model);
+            }
+        }
+
+        
+                #region Helpers
+>>>>>>> 8292167de7131b010ff3fc497ee47e64e548224d
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 

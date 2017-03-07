@@ -17,9 +17,15 @@ namespace DptsData
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+<<<<<<< HEAD
                // defaults: new { controller = "UploadFile", action = "Index", id = UrlParameter.Optional }
+=======
+>>>>>>> 8292167de7131b010ff3fc497ee47e64e548224d
             );
         }
     }
 }
+<<<<<<< HEAD
 //"Home"
+=======
+>>>>>>> 8292167de7131b010ff3fc497ee47e64e548224d

@@ -244,6 +244,7 @@ G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\Microsoft.Owin.Security.Microsoft
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\obj\Debug\DptsData.csprojResolveAssemblyReference.cache
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\obj\Debug\DptsData.dll
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\obj\Debug\DptsData.pdb
+<<<<<<< HEAD
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\Excel.dll
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\ICSharpCode.SharpZipLib.dll
 G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\Excel.pdb
@@ -259,3 +260,5 @@ G:\Yogesh\DoctorsToExcel\DptsData\DptsData\bin\LumenWorks.Framework.IO.xml
 G:\Yogesh\DoctorsToExcel\New folder\DptsData\DptsData\obj\Debug\DptsData.csprojResolveAssemblyReference.cache
 G:\Yogesh\DoctorsToExcel\New folder\DptsData\DptsData\obj\Debug\DptsData.dll
 G:\Yogesh\DoctorsToExcel\New folder\DptsData\DptsData\obj\Debug\DptsData.pdb
+=======
+>>>>>>> 8292167de7131b010ff3fc497ee47e64e548224d

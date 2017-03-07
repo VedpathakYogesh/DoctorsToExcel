@@ -66,7 +66,14 @@ namespace DptsData.Models
         [DataType(DataType.Text)]
         public string YearsOfExperience { get; set; }
 
+<<<<<<< HEAD
         
+=======
+        //[Required]
+        //[Display(Name = "YearsOfExperience")]
+        //[DataType(DataType.Text)]
+        //public int YearsOfExperience { get; set; }
+>>>>>>> 8292167de7131b010ff3fc497ee47e64e548224d
 
     }
 }
